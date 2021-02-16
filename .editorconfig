@@ -1,0 +1,10 @@
+# note that unitof/self-docs, which is usually installed as a submodule to content/
+# _also_ specifies `root = true`, thus overriding these settings for all content
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
