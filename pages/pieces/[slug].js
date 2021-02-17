@@ -1,4 +1,4 @@
-import { getPieceBySlug } from '../../lib/api'
+import { getPieceBySlug, getAllSlugs } from '../../lib/api'
 import mdToHtml from '../../lib/mdToHtml'
 
 export default function Piece({ piece }) {
@@ -14,7 +14,6 @@ export default function Piece({ piece }) {
 }
 
 export async function getStaticProps(context) {
-  console.log('context', context) //debug
   const piece = await getPieceBySlug(context.params.slug, [
     'title',
     'body_md',
@@ -28,7 +27,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const pieces = ['phone-art'] // TODO: hardcoded test
+  const pieces = getAllSlugs()
 
   return {
     paths: pieces.map((piece) => {
