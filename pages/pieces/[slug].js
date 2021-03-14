@@ -5,6 +5,13 @@ export default function Piece({ piece }) {
   return (
     <article>
       <h1 className="piece-title">{piece.title}</h1>
+      <h3 className="piece-metadata">
+        date_firstPublished: {piece.date_firstPublished}
+        date_lastUpdated: {piece.date_lastUpdated}
+      </h3>
+      <code>
+        gitdump: {piece.gitdump}
+      </code>
       <div
         className="piece-body"
         dangerouslySetInnerHTML={{ __html: piece.body_html }}
@@ -17,6 +24,9 @@ export async function getStaticProps(context) {
   const piece = await getPieceBySlug(context.params.slug, [
     'title',
     'body_md',
+    'date_firstPublished',
+    'date_lastUpdated',
+    'gitdump',
   ])
   piece.body_html = await mdToHtml(piece.body_md || '')
   return {
