@@ -1,5 +1,6 @@
 {
-  "name": "docs.jacobford.com",
+  "name": "self-docs",
+  "description": "documentation of a person; a non-chronological blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
