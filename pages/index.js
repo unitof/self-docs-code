@@ -1,8 +1,12 @@
 import { getPieceBySlug, getAllSlugs } from '../lib/api'
+import Head from 'next/Head'
 
 export default function TableOfContents({ pieces }) {
   return (
     <article>
+      <Head>
+        <title>Documentation of Jacob Ford</title>
+      </Head>
       <h1 className="site-title">Documentation of Jacob Ford</h1>
       <h2 className="site-subtitle">All substance, no style</h2>
       <ul>

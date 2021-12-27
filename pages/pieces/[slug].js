@@ -1,9 +1,13 @@
+import Head from 'next/Head'
 import { getPieceBySlug, getAllSlugs } from '../../lib/api'
 import mdToHtml from '../../lib/mdToHtml'
 
 export default function Piece({ piece }) {
   return (
     <article>
+      <Head>
+        <title>{piece.title} by Jacob Ford</title>
+      </Head>
       <header>
         <nav>
           <a className="back" href="/">Return to Table of Contents</a>
