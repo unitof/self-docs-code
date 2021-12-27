@@ -1,5 +1,5 @@
 import { getPieceBySlug, getAllSlugs } from '../lib/api'
-import Head from 'next/Head'
+import Head from 'next/head'
 
 export default function TableOfContents({ pieces }) {
   return (

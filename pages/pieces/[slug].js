@@ -1,4 +1,4 @@
-import Head from 'next/Head'
+import Head from 'next/head'
 import { getPieceBySlug, getAllSlugs } from '../../lib/api'
 import mdToHtml from '../../lib/mdToHtml'
 
