@@ -19,7 +19,7 @@ export async function getStaticProps(context) {
   const fields = ['title', 'slug']
   const allPieces = allSlugs.map(pieceSlug => getPieceBySlug(pieceSlug, fields))
 
-  console.log(allPieces)
+  // console.log(allPieces) //debug
 
   return {
     props: {
