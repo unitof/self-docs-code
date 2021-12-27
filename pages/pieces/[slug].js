@@ -4,15 +4,20 @@ import mdToHtml from '../../lib/mdToHtml'
 export default function Piece({ piece }) {
   return (
     <article>
-      <h1 className="piece-title">{piece.title}</h1>
-      <h3 className="piece-metadata">
-        date_firstPublished: {piece.date_firstPublished}
-        date_lastUpdated: {piece.date_lastUpdated}
-      </h3>
-      <code>
-        gitdump: {piece.gitdump}
-      </code>
-      <div
+      <header>
+        <nav>
+          <a className="back" href="/">Return to Table of Contents</a>
+        </nav>
+        <h1 className="piece-title">{piece.title}</h1>
+        <h3 className="piece-metadata">
+          date_firstPublished: {piece.date_firstPublished}<br/>
+          date_lastUpdated: {piece.date_lastUpdated}
+        </h3>
+        <code>
+          gitdump: {piece.gitdump}
+        </code>
+      </header>
+      <section
         className="piece-body"
         dangerouslySetInnerHTML={{ __html: piece.body_html }}
       />
