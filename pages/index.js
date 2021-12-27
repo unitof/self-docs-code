@@ -7,7 +7,7 @@ export default function TableOfContents({ pieces }) {
       <h2 className="site-subtitle">All substance, no style</h2>
       <ul>
       {pieces.map(piece =>
-        <li><a href="/pieces/{piece.slug}">{piece.title}</a></li>
+        <li><a href={`/pieces/${piece.slug}`}>{piece.title}</a></li>
       )}
       </ul>
     </article>
