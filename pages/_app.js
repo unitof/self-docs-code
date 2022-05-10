@@ -2,7 +2,7 @@ import '../styles/global.css'
 import { useEffect } from 'react';
 import * as Fathom from 'fathom-client'
 
-const fathomTrackingCode = process.env.FATHOM_TRACKING_CODE
+const fathomTrackingCode = process.env.NEXT_PUBLIC_FATHOM_SITEID
 
 function App({ Component, pageProps }) {
 
