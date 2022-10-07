@@ -1,19 +1,24 @@
 {
   "name": "self-docs",
-  "description": "documentation of a person; a non-chronological blog",
+  "description": "a non-chronological blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next-remote-watch ./content ./lib",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "fathom-client": "^3.2.0",
     "gray-matter": "^4.0.3",
     "next": "^12.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remark": "^14.0.1",
+    "rehype-react": "^7.1.0",
+    "remark": "^14.0.2",
     "remark-html": "^15.0.0"
+  },
+  "devDependencies": {
+    "next-remote-watch": "^1.0.0"
   }
 }

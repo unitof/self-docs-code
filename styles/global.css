@@ -1,0 +1,176 @@
+body {
+  color: #454545;
+  background-color: #eeeeee;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+}
+
+header nav {
+  display: block;
+  text-align: left;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+section,
+header {
+  margin: auto;
+  padding: 1em;
+  max-width: 800px;
+}
+
+small {
+  /* all small caps */
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+figure {
+  margin: 0;
+}
+
+figure + figure {
+  margin-left: 1em;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+figure figcaption {
+  padding: 0 1em;
+  font-size: 0.7em;
+  text-transform: lowercase;
+  font-variant: small-caps;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+a.home,
+a[href="/"] {
+  position: relative;
+}
+
+a.home::before,
+a[href="/"]::before {
+  position: absolute;
+  right: calc(100% + 0.1em);
+  top: -0.12em;
+  content: "⬸ ";
+  transition: right 0.5s;
+}
+
+a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration-color: #a8a8a8;
+  text-decoration-thickness: 2px;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a.home:hover::before,
+a[href="/"]:hover::before {
+  right: calc(100% + 1em);
+}
+
+@media screen and (max-width: 800px) {
+  /* see also above for .carousell (keeping with its calc()-heavy styles) */
+  html {
+    font-size: 20px;
+  }
+
+  header aside {
+    font-weight: 500;
+    border-width: 2px;
+  }
+
+  section,
+  header {
+    padding: 0 1em;
+  }
+
+  h1, h2, h3 {
+    margin: 18px 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+
+  .links {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    flex-direction: column;
+  }
+
+  header aside {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em 3em;
+  }
+
+  h1, h2, h3, p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+
+/* GALLERY / CAROUSEL */
+
+section.gallery {
+  max-width: unset;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section.gallery > *:not(.carousell) {
+  max-width: 800px;
+  margin: auto;
+
+  overflow-y: scroll;
+}
+
+.carousell {
+  /* en.wikipedia.org/wiki/B%26B_Carousell */
+  overflow-y: scroll;
+  margin: 1em 0;
+}
+
+.carousell .wolfinger {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+
+  width: calc((800px + 1em) * 17); /* must be # of children */
+  margin: 0 calc(50vw - 400px); /* omg it works */
+  /* TODO: margin-right is actually ignored https://stackoverflow.com/q/38993170/1489243 */
+}
+
+@media screen and (max-width: 800px) {
+  .carousell .wolfinger {
+    width: calc(((100vw - 2em) + 1em) * 17);
+    margin: 0 1em;
+  }
+}
+
+
+/* 𝓙𝓪𝓬𝓸𝓫 𝓕𝓸𝓻𝓭, 2021 */
