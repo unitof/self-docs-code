@@ -14,8 +14,8 @@ export default function Piece({ piece }) {
         </nav>
         <h1 className="piece-title">{piece.title}</h1>
         <h3 className="piece-metadata">
-          date_firstPublished: {piece.date_firstPublished}<br/>
-          date_lastUpdated: {piece.date_lastUpdated}
+          date_firstPublished: {piece.date_firstPublished.authorDate}<br/>
+          date_lastUpdated: {piece.date_lastUpdated.authorDate}
         </h3>
         <code>
           gitdump: {piece.gitdump}
