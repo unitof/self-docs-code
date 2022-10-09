@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "date-and-time": "^2.4.1",
     "fathom-client": "^3.5.0",
     "gitlog": "^4.0.4",
     "gray-matter": "^4.0.3",

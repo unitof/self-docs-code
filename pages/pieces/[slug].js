@@ -14,12 +14,8 @@ export default function Piece({ piece }) {
         </nav>
         <h1 className="piece-title">{piece.title}</h1>
         <h3 className="piece-metadata">
-          date_firstPublished: {piece.date_firstPublished.authorDate}<br/>
-          date_lastUpdated: {piece.date_lastUpdated.authorDate}
+          Written on a {piece.date_firstPublished}
         </h3>
-        <code>
-          gitdump: {piece.gitdump}
-        </code>
       </header>
       <section
         className="piece-body"
