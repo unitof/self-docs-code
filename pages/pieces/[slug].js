@@ -31,7 +31,6 @@ export async function getStaticProps(context) {
     'body_md',
     'date_firstPublished',
     'date_lastUpdated',
-    'gitdump',
   ])
   piece.body_html = await mdToHtml(piece.body_md || '')
   return {
