@@ -13,6 +13,7 @@ export default function Piece({ piece }) {
           <a className="back" href="/">Return to Table of Contents</a>
         </nav>
         <h1 className="piece-title">{piece.title}</h1>
+        <h2>{piece.subtitle}</h2>
         <h3 className="piece-metadata">
           Written on a {piece.date_firstPublished}
         </h3>
@@ -28,6 +29,7 @@ export default function Piece({ piece }) {
 export async function getStaticProps(context) {
   const piece = await getPieceBySlug(context.params.slug, [
     'title',
+    'subtitle',
     'body_md',
     'date_firstPublished',
     'date_lastUpdated',
