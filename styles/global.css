@@ -1,9 +1,87 @@
+@font-face {
+  font-family: 'Triplicate A';
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: auto;
+  src: url('/fonts/triplicate_ot_a_regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Triplicate A';
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  font-display: auto;
+  src: url('/fonts/triplicate_ot_a_italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Triplicate A';
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-display: auto;
+  src: url('/fonts/triplicate_ot_a_bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Triplicate A';
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: normal;
+  font-display: auto;
+  src: url('/fonts/triplicate_ot_a_bold_italic.woff2') format('woff2');
+}
+
+@font-face {
+  src: url('/fonts/FernVariable-Roman-VF.woff2') format("woff2"),
+       url('/fonts/FernVariable-Roman-VF.woff') format("woff");
+  font-family: 'Fern Web';
+  font-style: normal;
+  font-weight: 400 800;
+}
+
+
+@font-face {
+  src: url('/fonts/FernVariable-Italic-VF.woff2') format("woff2"),
+       url('/fonts/FernVariable-Italic-VF.woff') format("woff");
+  font-family: 'Fern Web';
+  font-style: italic;
+  font-weight: 400 800;
+}
+
 body {
   color: #454545;
   background-color: #eeeeee;
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
+
+  font-size: 18px;
+  font-family: 'Fern Web';
+}
+
+.piece-body {
+  line-height: 1.7rem;
+}
+
+hr {
+  border: none;
+}
+
+hr::before {
+  display: block;
+  text-align: center;
+  content: '❦';
+}
+
+code {
+  font-family: 'Triplicate A', 'Menlo', monospace;
+  word-break: break-all;
+  background-color: #dddddd;
+  padding: 0 0.1em;
+  border-radius: 0.2rem;
 }
 
 header {
@@ -41,6 +119,11 @@ figure + figure {
 figure img {
   width: 100%;
   border-radius: 1em;
+}
+
+img {
+  /* dumb, gotta figure out images ASAP */
+  max-width: 100px;
 }
 
 figure figcaption {
@@ -108,7 +191,7 @@ a[href="/"]:hover::before {
 
   h2 {
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 
   .links {

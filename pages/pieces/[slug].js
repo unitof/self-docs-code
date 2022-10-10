@@ -6,20 +6,17 @@ export default function Piece({ piece }) {
   return (
     <article>
       <Head>
-        <title>{piece.title} by Jacob Ford</title>
+        <title>{piece.title}, by Jacob Ford</title>
       </Head>
       <header>
         <nav>
           <a className="back" href="/">Return to Table of Contents</a>
         </nav>
         <h1 className="piece-title">{piece.title}</h1>
+        <h2>{piece.subtitle}</h2>
         <h3 className="piece-metadata">
-          date_firstPublished: {piece.date_firstPublished}<br/>
-          date_lastUpdated: {piece.date_lastUpdated}
+          Written on a {piece.date_firstPublished}
         </h3>
-        <code>
-          gitdump: {piece.gitdump}
-        </code>
       </header>
       <section
         className="piece-body"
@@ -32,10 +29,10 @@ export default function Piece({ piece }) {
 export async function getStaticProps(context) {
   const piece = await getPieceBySlug(context.params.slug, [
     'title',
+    'subtitle',
     'body_md',
     'date_firstPublished',
     'date_lastUpdated',
-    'gitdump',
   ])
   piece.body_html = await mdToHtml(piece.body_md || '')
   return {
