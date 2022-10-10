@@ -6,7 +6,7 @@ export default function Piece({ piece }) {
   return (
     <article>
       <Head>
-        <title>{piece.title} by Jacob Ford</title>
+        <title>{piece.title}, by Jacob Ford</title>
       </Head>
       <header>
         <nav>
