@@ -66,6 +66,16 @@ body {
   line-height: 1.7rem;
 }
 
+hr {
+  border: none;
+}
+
+hr::before {
+  display: block;
+  text-align: center;
+  content: '❦';
+}
+
 code {
   font-family: 'Triplicate A', 'Menlo', monospace;
   word-break: break-all;
