@@ -121,6 +121,11 @@ figure img {
   border-radius: 1em;
 }
 
+img {
+  /* dumb, gotta figure out images ASAP */
+  max-width: 100px;
+}
+
 figure figcaption {
   padding: 0 1em;
   font-size: 0.7em;
