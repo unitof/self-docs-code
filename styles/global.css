@@ -57,6 +57,21 @@ body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
+
+  font-size: 18px;
+  font-family: 'Fern Web';
+}
+
+.piece-body {
+  line-height: 1.7rem;
+}
+
+code {
+  font-family: 'Triplicate A', 'Menlo', monospace;
+  word-break: break-all;
+  background-color: #dddddd;
+  padding: 0 0.1em;
+  border-radius: 0.2rem;
 }
 
 header {
